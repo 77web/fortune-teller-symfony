@@ -2,6 +2,8 @@
 
 namespace App\Repository;
 
+use App\Domain\FetchFortuneInterface;
+use App\Domain\FortuneInterface;
 use App\Entity\Fortune;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -12,39 +14,18 @@ use Doctrine\Persistence\ManagerRegistry;
  * @method Fortune[]    findAll()
  * @method Fortune[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class FortuneRepository extends ServiceEntityRepository
+class FortuneRepository extends ServiceEntityRepository implements FetchFortuneInterface
 {
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Fortune::class);
     }
 
-    // /**
-    //  * @return Fortune[] Returns an array of Fortune objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    public function fetchTodaysFortune(string $targetSign): ?FortuneInterface
     {
-        return $this->createQueryBuilder('f')
-            ->andWhere('f.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('f.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
+        return $this->findOneBy([
+            'targetSign' => $targetSign,
+            'targetDate' => new \DateTimeImmutable(),
+        ]);
     }
-    */
-
-    /*
-    public function findOneBySomeField($value): ?Fortune
-    {
-        return $this->createQueryBuilder('f')
-            ->andWhere('f.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
-    }
-    */
 }
