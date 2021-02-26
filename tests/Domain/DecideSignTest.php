@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit\Domain;
+namespace App\Tests\Domain;
 
 use App\Domain\DecideSign;
 use PHPUnit\Framework\TestCase;
