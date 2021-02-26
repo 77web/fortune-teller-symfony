@@ -65,10 +65,13 @@
         }
     },
     "require-dev": {
+        "doctrine/doctrine-fixtures-bundle": "^3.4",
+        "liip/test-fixtures-bundle": "^1.11",
         "mockery/mockery": "^1.4",
         "symfony/browser-kit": "^5.2",
         "symfony/css-selector": "^5.2",
         "symfony/maker-bundle": "^1.29",
-        "symfony/phpunit-bridge": "^5.2"
+        "symfony/phpunit-bridge": "^5.2",
+        "theofidry/alice-data-fixtures": "^1.4"
     }
 }
