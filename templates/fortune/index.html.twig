@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<form action="{# {{ path('fortune_show') }}#}" method="get">
+<form action="{{ path('fortune_show') }}" method="get">
     <input type="date" name="birthday">
     <button type="submit">今日の運勢を見る</button>
 </form>
