@@ -1,8 +1,8 @@
-@extends('layout')
+{% extends 'base.html.twig' %}
 
-@section('content')
-<form action="{{ route('fortune.show') }}" method="get">
+{% block body %}
+<form action="{# {{ path('fortune_show') }}#}" method="get">
     <input type="date" name="birthday">
     <button type="submit">今日の運勢を見る</button>
 </form>
-@endsection
+{% endblock %}
