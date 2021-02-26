@@ -81,6 +81,9 @@
     "friendsofphp/proxy-manager-lts": {
         "version": "v1.0.3"
     },
+    "hamcrest/hamcrest-php": {
+        "version": "v2.0.1"
+    },
     "laminas/laminas-code": {
         "version": "4.0.0"
     },
@@ -89,6 +92,9 @@
     },
     "laminas/laminas-zendframework-bridge": {
         "version": "1.2.0"
+    },
+    "mockery/mockery": {
+        "version": "1.4.3"
     },
     "psr/cache": {
         "version": "1.0.1"
