@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\FortuneRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Timestampable\Traits\TimestampableEntity;
 
 /**
  * @ORM\Table(name="fortunes")
@@ -11,6 +12,8 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Fortune
 {
+    use TimestampableEntity;
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
