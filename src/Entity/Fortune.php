@@ -1,0 +1,75 @@
+<?php
+
+namespace App\Entity;
+
+use App\Repository\FortuneRepository;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity(repositoryClass=FortuneRepository::class)
+ */
+class Fortune
+{
+    /**
+     * @ORM\Id
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
+     */
+    private $id;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $targetSign;
+
+    /**
+     * @ORM\Column(type="date_immutable")
+     */
+    private $targetDate;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $fortuneText;
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getTargetSign(): ?string
+    {
+        return $this->targetSign;
+    }
+
+    public function setTargetSign(string $targetSign): self
+    {
+        $this->targetSign = $targetSign;
+
+        return $this;
+    }
+
+    public function getTargetDate(): ?\DateTimeImmutable
+    {
+        return $this->targetDate;
+    }
+
+    public function setTargetDate(\DateTimeImmutable $targetDate): self
+    {
+        $this->targetDate = $targetDate;
+
+        return $this;
+    }
+
+    public function getFortuneText(): ?string
+    {
+        return $this->fortuneText;
+    }
+
+    public function setFortuneText(string $fortuneText): self
+    {
+        $this->fortuneText = $fortuneText;
+
+        return $this;
+    }
+}
