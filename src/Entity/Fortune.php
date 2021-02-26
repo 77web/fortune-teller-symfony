@@ -6,6 +6,7 @@ use App\Repository\FortuneRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
+ * @ORM\Table(name="fortunes")
  * @ORM\Entity(repositoryClass=FortuneRepository::class)
  */
 class Fortune
