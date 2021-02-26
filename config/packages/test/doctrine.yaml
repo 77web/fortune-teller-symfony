@@ -1,0 +1,5 @@
+doctrine:
+    dbal:
+        driver: pdo_sqlite
+        url: null
+        path: '%kernel.cache_dir%/test.db'
