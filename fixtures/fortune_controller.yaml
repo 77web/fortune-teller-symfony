@@ -1,0 +1,9 @@
+App\Entity\Fortune:
+  yagi_today:
+    targetSign: '山羊座'
+    targetDate: <(new \DateTimeImmutable())>
+    fortuneText: '今日の運勢は最高です！'
+  mizugame_today:
+    targetSign: '水瓶座'
+    targetDate: <(new \DateTimeImmutable())>
+    fortuneText: '今日の運勢は最低です！'
