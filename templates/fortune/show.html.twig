@@ -1,6 +1,6 @@
-@extends('layout')
+{% extends 'base.html.twig' %}
 
-@section('content')
-<h2>{{ $fortune->target_date }}の{{ $fortune->target_sign }}の運勢</h2>
-<div>{{ $fortune->fortune_text }}</div>
-@endsection
+{% block body %}
+<h2>{{ fortune.targetDate|date('Y-m-d') }}の{{ fortune.targetSign }}の運勢</h2>
+<div>{{ fortune.fortuneText }}</div>
+{% endblock %}
